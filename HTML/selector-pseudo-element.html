@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>selector-pseudo-element</title>
+<meta charset="utf-8"></meta>
+<style type="text/css">
+p {
+	width: 450px;
+	line-height: 1.5;
+}
+.p1::first-letter {
+	color: red;
+	font-size: 20px;
+}
+.p2::first-line {
+	color:green;
+}
+.p3::before{
+	width:16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: -2px;
+	margin-right: 10px;
+}
+.p4::after {
+	content: "::after element";
+	color: orange;
+}
+.p4-1::after {
+	content: "";
+	width: 16px;	
+	height: 16px;
+	display:inline-block;
+	vertical-align: -2px;
+	background: orange;
+	margin-left: 10px;
+}
+</style>
+</head>
+<body>
+	<p class="p1">我是一段话，用来测试伪素, 可以有很多行，可以有很多行</p>
+	<p class="p2">我是一段话，用来测试伪素, 可以有很多行，可以有很多行</p>
+	<p class="p3">我是一段话，用来测试伪素, 可以有很多行，可以有很多行</p>
+	<p class="p4">我是一段话，用来测试伪素, 可以有很多行，可以有很多行</p>
+	<p class="p4-1">我是一段话，用来测试伪素, 可以有很多行，可以有很多行</p>
+</body>
+</html>
