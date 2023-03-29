@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Div Show</title>
+        <style type="text/css">
+            .h2 {
+                margin: 0;
+            }
+
+            .box {
+                height: 100px;
+                position: relative;
+                z-index: 2;
+                background: #87cbd7;
+                margin: 10px;
+                display: block;
+            }
+
+            .box1 {
+                /*display: none;*/
+            }
+            .box2 {
+                /*visibility: hidden;*/
+            }
+            .demo {
+                width: 450px;
+                height: 100px;
+                background: #f1c9cc;
+            }
+
+            .box3 {
+                /* overflow: auto; */
+            }
+
+            .box3 .demo {
+                background: green;
+                height: 300px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="box box1">
+            <div class="demo">
+                <h2>Display</h2>
+                <ul>
+                    <li>所有的后代元素都隐藏</li>
+                    <li>好像这个元素不存在一样</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="demo">
+                <h2>Visibility</h2>
+                <ul>
+                    <li>元素的大小不变化，可以理解为透明</li>
+                    <li>子元素设为 visiblity: visible, 该元依然可见</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="demo">
+                <h2>overflow</h2>
+                <ul>
+                    <li>规定了当内容元素溢出父容器时的展现形式</li>
+                    <li>裁剪内容，使用滚动条来显示或直接显示超出部分</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
