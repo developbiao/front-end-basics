@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>bfc</title>
+	<style type="text/css">
+		/*BFC (Block Formatting Context)*/
+		.wrapper {
+			/* enable BFC*/
+			overflow: hidden;
+		}
+		.box1 {
+			width: 100px;
+			height: 100px;
+			background-color:peru;
+			margin-bottom: 10px;
+		}
+
+		.box2 {
+			width: 100px;
+			height: 100px;
+			background-color:palevioletred;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box1"></div>
+	</div>
+	<div class="box2"></div>
+</body>
+</html>
+
+
+
+
+
