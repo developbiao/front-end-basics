@@ -1,0 +1,136 @@
+@charset "utf-8";
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header {
+    background-color: #ededed;
+}
+.footer {
+    background-color: #e1dacf;
+}
+
+.container {
+    background-color: #ccc;
+}
+
+.mian {
+    background-color: #fff;
+}
+
+.aside--right {
+    background-color: #efefef;
+}
+
+.center-inner {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .center-inner,
+.footer .center-inner {
+    padding: 20px;
+}
+
+.container .center-inner {
+    display: flex;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.aside--right .aside-block {
+    margin-bottom: 20px;
+}
+
+.aside--right .aside-block:last-child{
+    margin-bottom: 0;
+}
+
+
+.list {
+    overflow: hidden;
+}
+
+.list .item {
+    float: left;
+    width: 200px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+
+.list .item:nth-child(4) {
+    margin-right:0;
+}
+
+.list .item-img {
+    width: 100%;
+}
+
+/* meida queries*/
+@media (min-width: 1200px) {
+    .list .item {
+        margin-right: 13px;
+        margin-bottom: 13px;
+    }
+
+    .list .item:nth-child(4) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+    .page {
+        min-width: 1000px;
+    }
+    .center-inner {
+        width: 1000px;
+    }
+    .list .item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .list .item:nth-child(4) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .center-inner {
+        width: 100%
+    }
+    .container .center-inner {
+        display: block;
+    }
+    .aside--right {
+        display: flex;
+        width: 100%;
+        margin-left: 0;
+    }
+    .aside--right .aside-block {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .list .item {
+        width: 50%;
+        padding-right: 10px;
+        margin-right: 0 !important;
+    }
+    .aside--right {
+        display: block;
+    }
+    .aside--right .aside-block {
+        margin-bottom: 20px;
+    }
+    .aside--right .aside-block:last-child {
+        margin-bottom: 0;
+    }
+}
