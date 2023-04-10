@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Media queries</title>
+        <style type="text/css">
+            /* 手机竖屏 */
+            .demo {
+                color: #000;
+                font-size: 2em;
+            }
+            
+            /*手机横屏*/
+            @media screen and (min-width: 480px) {
+                .demo {
+                    color: #999;
+                }
+            } 
+
+            /*平板*/
+            @media screen and (min-width: 768px) {
+                .demo {
+                    color: red;
+                }
+            }
+
+            /* 平板横屏及 PC 窄屏 */
+            @media screen and (min-width: 1024px) {
+                .demo {
+                    color: blue;
+                }
+            }
+
+            /* PC 宽屏 */
+            @media screen and (min-width: 1200px) {
+                .demo {
+                    color: green;
+                }
+            }
+
+            @media screen and (min-width: 1380px) {
+                .demo {
+                    color: orange;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="demo">Default color is balck, viewport >= 480px color is red, >= 1024px is blue, >= 1200px green, >= 1380px is orange</div>
+    </body>
+</html>
