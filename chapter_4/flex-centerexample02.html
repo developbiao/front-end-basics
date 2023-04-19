@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不定项居中布局</title>
+    <style>
+        /* 方法一 flex */
+        /* .box {
+            width: 300px;
+            height: 200px;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .box div {
+            background-color:cadetblue;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 5px;
+        } */
+
+        /* 传统方法2 */ 
+        .box {
+            width: 300px;
+            height: 200px;
+            background-color: skyblue;
+            position: relative;
+        }
+
+        .box section {
+            text-align: center;
+            width: 100%;
+            font-size: 0;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .box div {
+            background-color:cadetblue;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <section>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </section>
+    </div>
+</body>
+</html>

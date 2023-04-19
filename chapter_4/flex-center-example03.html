@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>均分列布局实现</title>
+    <style>
+        /*方法1: 传统方式*/
+        /*
+        .main {
+            width: 500px;
+            height: 200px;
+            background-color: skyblue;
+            padding: 0 20px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .main section {
+            width: 600px;
+        }
+        .main div {
+            width: 30px;
+            height: 30px;
+            background-color:brown;
+            border-radius: 50%;
+            float: left;
+            margin-right: 77px;
+        }
+        */
+
+        /* 方法2: flex 实现均分列布局，如淘宝菜单导航 */
+        .main {
+            height: 200px;
+            background-color: skyblue;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 0 20px
+        }
+
+        .main div {
+            width: 30px;
+            height: 30px;
+            background-color:brown;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="main">
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </div> -->
+
+    <div class="main">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+</body>
+</html>

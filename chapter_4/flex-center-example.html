@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Item</title>
+    <style>
+        /* 方法一 居中 */
+        /* .box {
+            width: 300px;
+            height: 200px;
+            background: #abcdef;
+            vertical-align: middle;
+            display: table-cell;
+        }   */
+        
+        /* 方法二 文字居中，但内容超过后有问题 */
+        /* .box {
+            width: 300px;
+            height: 200px;
+            background: #abcdef;
+            line-height: 200px;
+        }   */
+
+        /* 方法三 flex align-items 属性 */
+        /* .box {
+            width: 300px;
+            height: 200px;
+            background: #abcdef;
+            display: flex;
+            align-items: center;
+        } */
+
+        /* 方法四(推荐) flex justify-content 实现左右， align-items 实现上下 */
+        /* .box {
+            width: 600px;
+            height: 300px;
+            background: #abcdef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box div {
+            width: 200px;
+            height: 200px;
+            background:green;
+        } */
+
+        /* 方法五 传统的方式*/
+        /* .box {
+            width: 600px;
+            height: 300px;
+            background: #abcdef;
+            position: relative;
+        }
+
+        .box div {
+            width: 200px;
+            height: 200px;
+            background:green;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        } */
+
+        /* 方法六 margin-auto 解决(不推荐)*/
+        .box {
+            width: 600px;
+            height: 300px;
+            background: #abcdef;
+            position: relative;
+        }
+
+        .box div {
+            width: 200px;
+            height: 200px;
+            background:pink;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            /* margin: -100px; */
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        测试文字努力学习，学习新技能并且输出。测试文字努力学习，学习新技能并且输出。测试文字努力学习，学习新技能并且输出。测试文字努力学习，学习新技能并且输出。
+    </div>  -->
+    <div class="box">
+            <div></div>
+    </div>
+</body>
+</html>
