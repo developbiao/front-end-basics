@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-order</title>
+    <style>
+        .main {
+            background-color: seagreen;
+            display: flex;
+            align-items: center;
+            width: 600px;
+            height: 400px;
+            justify-content: center;
+        }
+        .main div {
+            width: 200px;
+            height: 200px;
+            background-color:aquamarine;
+            border: 1px black solid;
+            text-align: center;
+        }
+        .main div:nth-of-type(2) {
+            order: -1;
+        }
+        .main div:nth-of-type(4) {
+            order: -1;
+            background-color: blue;
+            height: 100px;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Layout Float 02 </title>
+    <style>
+        .main {
+            background-color:aqua;
+            width: 800px;
+            overflow: hidden;
+        }
+        .main div {
+            width: 200px;
+            background-color: pink;
+            float: left;
+            margin-bottom: -2000px;
+            padding-bottom: 2000px;
+        }
+        .main div:nth-of-type(2) {
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+            <div>
+                <p>Hi~ 晚上吃烧烤呀</p>
+                <p>Hi~ 晚上吃烧烤呀</p>
+                <p>Hi~ 晚上吃烧烤呀</p>
+                <p>Hi~ 晚上吃烧烤呀</p>
+                <p>Hi~ 晚上吃烧烤呀</p>
+            </div>
+            <div>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+                <p>Go 风浪越大鱼越贵!</p>
+            </div>
+    </div>
+</body>
+</html>
