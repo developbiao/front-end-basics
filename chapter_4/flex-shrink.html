@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex item shirnk</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background: skyblue;
+            display: flex;
+        }
+        .main div {
+            width: 600px;
+            height: 100px;
+            flex-shrink: 0.5; /*1-> 自动收缩， 取 0 时则不压缩, 小数时为收缩溢出空间的比例如 0.5 即 1/2 */
+            background-color: aquamarine;
+        }
+
+        .main2 {
+            width: 500px;
+            height: 300px;
+            background: skyblue;
+            display: flex;
+        }
+        .main2 div:nth-of-type(1) {
+            width: 300px;
+            height: 100px;
+            background-color: aquamarine;
+            /* flex-shrink: 2; */
+            flex-shrink: 0.2;
+        }
+        .main2 div:nth-of-type(2) {
+            width: 400px;
+            height: 100px;
+            background-color: blue;
+            /* flex-shrink: 1; */
+            flex-shrink: 0.1;
+        }
+        /* Rule 1: flex-shirk 默认计算收缩宽度*/
+        /* 默认溢出px 300 + 400 - 500 = 200px*/
+        /* 第一个 div 计算收缩宽度: 300 - (3/7 * 200) */
+        /* 第二个 div 计算收缩宽度: 400 - (3/7 * 200) */
+        
+        /* Rule 2: 当 flex-shirk > 2 时则以倍数计算原来 width: 300px, 2 倍则 600px 表示占有 6/10 */
+        /* 第一个 div 计算收缩宽度: 300 - (6 / 10 * 200) */
+        /* 第二个 div 计算收缩宽度: 400 - (4 / 10 * 200) */
+
+    </style>
+</head>
+<body>
+    <!-- <div class="main">
+        <div>1</div>
+    </div> -->
+    <div class="main2">
+        <div>1</div>
+        <div>2</div>
+    </div>
+</body>
+</html>
